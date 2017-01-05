@@ -1,0 +1,11 @@
+[package]
+name = "syscall-challenge"
+version = "0.1.0"
+authors = ["Mathias Svensson <idolf@google.com>"]
+
+[dependencies]
+libc = "0.2"
+ipc-channel = "0.6"
+
+[dependencies.nix]
+git = "https://github.com/Idolf/nix.git"
