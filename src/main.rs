@@ -91,7 +91,6 @@ fn pivot_root() {
     unistd::mkdir("/tmp/old_root", stat::Mode::empty()).unwrap();
     unistd::pivot_root("/tmp", "/tmp/old_root").unwrap();
     unistd::chdir("/").unwrap();
-    fs::copy("/old_root/bin/busybox", "/busybox").unwrap();
     mount::umount2("/old_root", mount::MNT_DETACH).unwrap();
     assert!(unsafe { libc::rmdir(CString::new("/old_root").unwrap().as_ptr()) } == 0);
     mount::mount::<str, str, str, str>(None,
