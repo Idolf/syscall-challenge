@@ -3,19 +3,19 @@ name = "syscall-challenge"
 version = "0.1.0"
 dependencies = [
  "ipc-channel 0.6.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.19 (registry+https://github.com/rust-lang/crates.io-index)",
- "nix 0.8.0 (git+https://github.com/Idolf/nix.git)",
+ "libc 0.2.20 (registry+https://github.com/rust-lang/crates.io-index)",
+ "nix 0.8.0 (git+https://github.com/Idolf/nix.git?branch=ptrace-stuff)",
 ]
 
 [[package]]
 name = "bincode"
-version = "0.6.0"
+version = "0.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "byteorder 0.5.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "byteorder 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "num-traits 0.1.36 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-serialize 0.3.22 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 0.8.21 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 0.8.23 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -25,7 +25,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "byteorder"
-version = "0.5.3"
+version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
@@ -38,11 +38,11 @@ name = "ipc-channel"
 version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "bincode 0.6.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "bincode 0.6.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "lazy_static 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.19 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.20 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand 0.3.15 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 0.8.21 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 0.8.23 (registry+https://github.com/rust-lang/crates.io-index)",
  "uuid 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -53,22 +53,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "libc"
-version = "0.2.19"
-source = "git+https://github.com/rust-lang/libc#3ae8c850aa800c6c9440b65c6ea7cfc92731466d"
+version = "0.2.20"
+source = "git+https://github.com/rust-lang/libc#bce927b36878cd7ed708447b79b4e8ad87b39246"
 
 [[package]]
 name = "libc"
-version = "0.2.19"
+version = "0.2.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "nix"
 version = "0.8.0"
-source = "git+https://github.com/Idolf/nix.git#7a741d7a56bb178753d981ab7c6555b38592d979"
+source = "git+https://github.com/Idolf/nix.git?branch=ptrace-stuff#65f0d512049f7b0097614e68f90eda6b70d51154"
 dependencies = [
  "bitflags 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "cfg-if 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.19 (git+https://github.com/rust-lang/libc)",
+ "libc 0.2.20 (git+https://github.com/rust-lang/libc)",
  "void 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -82,7 +82,7 @@ name = "rand"
 version = "0.3.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "libc 0.2.19 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.20 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -92,7 +92,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "serde"
-version = "0.8.21"
+version = "0.8.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
@@ -109,18 +109,18 @@ version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [metadata]
-"checksum bincode 0.6.0 (registry+https://github.com/rust-lang/crates.io-index)" = "9fbba641f73d3e74a5431d4a6d9e42a70bcce76d466d796c852ba1db31ba41bc"
+"checksum bincode 0.6.1 (registry+https://github.com/rust-lang/crates.io-index)" = "55eb0b7fd108527b0c77860f75eca70214e11a8b4c6ef05148c54c05a25d48ad"
 "checksum bitflags 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "8dead7461c1127cf637931a1e50934eb6eee8bff2f74433ac7909e9afcee04a3"
-"checksum byteorder 0.5.3 (registry+https://github.com/rust-lang/crates.io-index)" = "0fc10e8cc6b2580fda3f36eb6dc5316657f812a3df879a44a66fc9f0fdbc4855"
+"checksum byteorder 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = "c40977b0ee6b9885c9013cd41d9feffdd22deb3bb4dc3a71d901cc7a77de18c8"
 "checksum cfg-if 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "de1e760d7b6535af4241fca8bd8adf68e2e7edacc6b29f5d399050c5e48cf88c"
 "checksum ipc-channel 0.6.0 (registry+https://github.com/rust-lang/crates.io-index)" = "f379ec6400f5cb93edbbb0ac56de3bf38331e22cbae9e27a10f04c1a0b4f8e90"
 "checksum lazy_static 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = "6abe0ee2e758cd6bc8a2cd56726359007748fbf4128da998b65d0b70f881e19b"
-"checksum libc 0.2.19 (git+https://github.com/rust-lang/libc)" = "<none>"
-"checksum libc 0.2.19 (registry+https://github.com/rust-lang/crates.io-index)" = "9e030dc72013ed68994d1b2cbf36a94dd0e58418ba949c4b0db7eeb70a7a6352"
-"checksum nix 0.8.0 (git+https://github.com/Idolf/nix.git)" = "<none>"
+"checksum libc 0.2.20 (git+https://github.com/rust-lang/libc)" = "<none>"
+"checksum libc 0.2.20 (registry+https://github.com/rust-lang/crates.io-index)" = "684f330624d8c3784fb9558ca46c4ce488073a8d22450415c5eb4f4cfb0d11b5"
+"checksum nix 0.8.0 (git+https://github.com/Idolf/nix.git?branch=ptrace-stuff)" = "<none>"
 "checksum num-traits 0.1.36 (registry+https://github.com/rust-lang/crates.io-index)" = "a16a42856a256b39c6d3484f097f6713e14feacd9bfb02290917904fae46c81c"
 "checksum rand 0.3.15 (registry+https://github.com/rust-lang/crates.io-index)" = "022e0636ec2519ddae48154b028864bdce4eaf7d35226ab8e65c611be97b189d"
 "checksum rustc-serialize 0.3.22 (registry+https://github.com/rust-lang/crates.io-index)" = "237546c689f20bb44980270c73c3b9edd0891c1be49cc1274406134a66d3957b"
-"checksum serde 0.8.21 (registry+https://github.com/rust-lang/crates.io-index)" = "7b7c6bf11cf766473ea1d53eb4e3bc4e80f31f50082fc24077cf06f600279a66"
+"checksum serde 0.8.23 (registry+https://github.com/rust-lang/crates.io-index)" = "9dad3f759919b92c3068c696c15c3d17238234498bbdcc80f2c469606f948ac8"
 "checksum uuid 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)" = "1a9ff57156caf7e22f37baf3c9d8f6ce8194842c23419dafcb0716024514d162"
 "checksum void 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)" = "6a02e4885ed3bc0f2de90ea6dd45ebcbb66dacffe03547fadbb0eeae2770887d"
